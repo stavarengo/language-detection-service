@@ -15,8 +15,19 @@ register_shutdown_function(
 
 $helper->trackRequestOnAnalytics($config);
 
-if (strpos($helper->getRequestUri(), $helper->getBasePath('/detect')) === 0) {
+$requestPath = parse_url($helper->getRequestUri(), PHP_URL_PATH);
+
+if ($requestPath == $helper->getBasePath('/detect')) {
     require __DIR__ . '/./detect.php';
-} else {
+} else if ($requestPath == $helper->getBasePath('/')) {
     require __DIR__ . '/./site.php';
+} else {
+    $helper->echoJson(
+        $helper->apiProblem(
+            'Not found',
+            404,
+            'This page does not exist.'
+        ),
+        404
+    );
 }

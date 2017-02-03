@@ -2,6 +2,22 @@
 
 /** @var \Sta\LanguageDetectionService\ViewHelper $helper */
 
+if (!isset($helper)) {
+    // This request is access this site directly. Did not passed by index.php
+    // Its like they type <http_address>/site.php in the browser address bar
+    require_once __DIR__ . '/../vendor/autoload.php';
+    $helper = new \Sta\LanguageDetectionService\ViewHelper();
+    $helper->echoJson(
+        $helper->apiProblem(
+            'Not found',
+            404,
+            'This page does not exist.'
+        ),
+        404
+    );
+    return;
+}
+
 if (!isset($_POST['t']) && !isset($_GET['t'])) {
     $helper->echoJson(
         $helper->apiProblem(
