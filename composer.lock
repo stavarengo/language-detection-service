@@ -233,12 +233,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stavarengo/cld2-php-language-detection-library.git",
-                "reference": "4498c37711541266ddf868b59149a2ff47e9854b"
+                "reference": "f63f87886cc111519bcd7564706e4a5cf6af73c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stavarengo/cld2-php-language-detection-library/zipball/4498c37711541266ddf868b59149a2ff47e9854b",
-                "reference": "4498c37711541266ddf868b59149a2ff47e9854b",
+                "url": "https://api.github.com/repos/stavarengo/cld2-php-language-detection-library/zipball/f63f87886cc111519bcd7564706e4a5cf6af73c7",
+                "reference": "f63f87886cc111519bcd7564706e4a5cf6af73c7",
                 "shasum": ""
             },
             "type": "library",
@@ -258,7 +258,7 @@
                 }
             ],
             "description": "PHP library for language detection build on top of CLD2.",
-            "time": "2017-02-03 17:08:36"
+            "time": "2017-02-03 21:17:33"
         },
         {
             "name": "theiconic/php-ga-measurement-protocol",

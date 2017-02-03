@@ -35,7 +35,7 @@ $text = trim(isset($_POST['t']) ? $_POST['t'] : $_GET['t']);
 
 try {
     $detectLanguage     = new \Sta\Cld2PhpLanguageDetection\DetectLanguage();
-    $detectionResponses = $detectLanguage->detect($_POST['t']);
+    $detectionResponses = $detectLanguage->detect($text);
 } catch (\Sta\Cld2PhpLanguageDetection\Exception\ModuleCld2NotFound $e) {
     $helper->echoJson($helper->apiProblem('Server misconfigured', 500, $e->getMessage()), 500);
 
