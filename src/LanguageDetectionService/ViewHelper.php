@@ -33,7 +33,7 @@ class ViewHelper
             $relativeFile = '/' . ltrim($relativeFile, '/');
         }
 
-        return $this->basePath . $relativeFile;
+        return preg_replace('!^//!', '/', $this->basePath . $relativeFile);
     }
 
     public function getHost()
