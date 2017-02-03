@@ -1,0 +1,23 @@
+{
+    "name": "stavarengo/language-detection-service",
+    "description": "aaaaaaa",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stavarengo",
+            "email": "faelsta@gmail.com"
+        }
+    ],
+    "require": {
+        "stavarengo/cld2-php-language-detection-library": "dev-master",
+        "theiconic/php-ga-measurement-protocol": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sta\\LanguageDetectionService\\": "src/LanguageDetectionService/"
+        }
+    }
+}
