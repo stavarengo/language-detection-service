@@ -26,4 +26,6 @@ RUN rm -rf /etc/apache2/sites-enabled/* && \
 
 WORKDIR /var/www/html/language-detection-service
 
+EXPOSE 80
+
 CMD ["apache2ctl", "-D", "FOREGROUND"]
