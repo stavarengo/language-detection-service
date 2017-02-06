@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "298184e22eb968c70150c311a9c5f888",
+    "content-hash": "6968460fa1a3f70d141d25bb1d109d9b",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -229,16 +229,16 @@
         },
         {
             "name": "stavarengo/cld2-php-language-detection-library",
-            "version": "dev-master",
+            "version": "v0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stavarengo/cld2-php-language-detection-library.git",
-                "reference": "f63f87886cc111519bcd7564706e4a5cf6af73c7"
+                "reference": "17e9c4e0f8ff27143999d34fa56eda74cab058af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stavarengo/cld2-php-language-detection-library/zipball/f63f87886cc111519bcd7564706e4a5cf6af73c7",
-                "reference": "f63f87886cc111519bcd7564706e4a5cf6af73c7",
+                "url": "https://api.github.com/repos/stavarengo/cld2-php-language-detection-library/zipball/17e9c4e0f8ff27143999d34fa56eda74cab058af",
+                "reference": "17e9c4e0f8ff27143999d34fa56eda74cab058af",
                 "shasum": ""
             },
             "type": "library",
@@ -258,7 +258,7 @@
                 }
             ],
             "description": "PHP library for language detection build on top of CLD2.",
-            "time": "2017-02-03 21:17:33"
+            "time": "2017-02-06T17:35:03+00:00"
         },
         {
             "name": "theiconic/php-ga-measurement-protocol",
@@ -304,11 +304,9 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "stavarengo/cld2-php-language-detection-library": 20
-    },
-    "prefer-stable": true,
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []

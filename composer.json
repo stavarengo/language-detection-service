@@ -1,8 +1,6 @@
 {
     "name": "stavarengo/language-detection-service",
-    "description": "aaaaaaa",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "description": "Free Online Tool Language Detector. See it in action in http://free-language-detector-online.stavarengo.com",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -12,7 +10,7 @@
         }
     ],
     "require": {
-        "stavarengo/cld2-php-language-detection-library": "dev-master",
+        "stavarengo/cld2-php-language-detection-library": "^0.0.3",
         "theiconic/php-ga-measurement-protocol": "^2.4"
     },
     "autoload": {
