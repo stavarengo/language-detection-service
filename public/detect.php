@@ -15,6 +15,7 @@ if (!isset($helper)) {
         ),
         404
     );
+
     return;
 }
 
@@ -31,25 +32,37 @@ if (!isset($_POST['t']) && !isset($_GET['t'])) {
     return;
 }
 
-$text = trim(isset($_POST['t']) ? $_POST['t'] : $_GET['t']);
+$text             = trim(isset($_POST['t']) ? $_POST['t'] : $_GET['t']);
+$onlyMostProbably = array_key_exists('most-probably', $_GET);
+$normalizeText    = !array_key_exists('do-not-normalize-text', $_GET);
 
-try {
-    $detectLanguage     = new \Sta\Cld2PhpLanguageDetection\DetectLanguage();
-    $detectionResponses = $detectLanguage->detect($text);
-} catch (\Sta\Cld2PhpLanguageDetection\Exception\ModuleCld2NotFound $e) {
-    $helper->echoJson($helper->apiProblem('Server misconfigured', 500, $e->getMessage()), 500);
-
-    return;
-}
-
-$result = [];
-foreach ($detectionResponses as $detectionResponse) {
-    $result[] = [
+$convertDetectionResponseToArray = function (\Sta\Cld2PhpLanguageDetection\DetectionResult $detectionResponse) {
+    return [
         'code' => $detectionResponse->getLanguageCode(),
         'name' => $detectionResponse->getLanguageName(),
         'probability' => $detectionResponse->getProbability(),
         'confidence' => $detectionResponse->getConfidence(),
     ];
+};
+
+$result = [];
+try {
+    $detectLanguage = new \Sta\Cld2PhpLanguageDetection\DetectLanguage();
+    if ($onlyMostProbably) {
+        if ($detectionResponse = $detectLanguage->detectOnlyMostProbably($text, $normalizeText)) {
+            $result = $convertDetectionResponseToArray($detectionResponse);
+        }
+    } else {
+        $result             = [];
+        $detectionResponses = $detectLanguage->detect($text, $normalizeText);
+        foreach ($detectionResponses as $detectionResponse) {
+            $result[] = $convertDetectionResponseToArray($detectionResponse);
+        }
+    }
+} catch (\Sta\Cld2PhpLanguageDetection\Exception\ModuleCld2NotFound $e) {
+    $helper->echoJson($helper->apiProblem('Server misconfigured', 500, $e->getMessage()), 500);
+
+    return;
 }
 
 $helper->echoJson($result);
