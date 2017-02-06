@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "stavarengo/cld2-php-language-detection-library": "^0.0.3",
+        "stavarengo/cld2-php-language-detection-library": "^0.0",
         "theiconic/php-ga-measurement-protocol": "^2.4"
     },
     "autoload": {

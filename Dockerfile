@@ -1,4 +1,4 @@
-FROM stavarengo/cld2-php-language-detection-library:v0.0.3
+FROM stavarengo/cld2-php-language-detection-library:v0.0.4
 
 COPY Docker/language-detection-service.conf /etc/apache2/sites-available/
 

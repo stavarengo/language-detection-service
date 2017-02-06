@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6968460fa1a3f70d141d25bb1d109d9b",
+    "content-hash": "1a88d49f5c8fd4e932b81f46254aad75",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -229,16 +229,16 @@
         },
         {
             "name": "stavarengo/cld2-php-language-detection-library",
-            "version": "v0.0.3",
+            "version": "v0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stavarengo/cld2-php-language-detection-library.git",
-                "reference": "17e9c4e0f8ff27143999d34fa56eda74cab058af"
+                "reference": "6598fdfc905feb12a2e2fcb410c5d1c2b35abe34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stavarengo/cld2-php-language-detection-library/zipball/17e9c4e0f8ff27143999d34fa56eda74cab058af",
-                "reference": "17e9c4e0f8ff27143999d34fa56eda74cab058af",
+                "url": "https://api.github.com/repos/stavarengo/cld2-php-language-detection-library/zipball/6598fdfc905feb12a2e2fcb410c5d1c2b35abe34",
+                "reference": "6598fdfc905feb12a2e2fcb410c5d1c2b35abe34",
                 "shasum": ""
             },
             "type": "library",
@@ -258,7 +258,7 @@
                 }
             ],
             "description": "PHP library for language detection build on top of CLD2.",
-            "time": "2017-02-06T17:35:03+00:00"
+            "time": "2017-02-06T19:13:12+00:00"
         },
         {
             "name": "theiconic/php-ga-measurement-protocol",
