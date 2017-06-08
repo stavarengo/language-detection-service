@@ -22,4 +22,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 
 WORKDIR /var/www/html/language-detection-service
 
+EXPOSE 80
+
 CMD ["apache2ctl", "-D", "FOREGROUND"]
