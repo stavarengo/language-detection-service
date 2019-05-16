@@ -9,11 +9,11 @@ $helper = new \Sta\LanguageDetectionService\ViewHelper();
 
 register_shutdown_function(
     function () use ($start, $config, $helper) {
-        $helper->trackTimeOnAnalytics($config, time() - $start);
+        @$helper->trackTimeOnAnalytics($config, time() - $start);
     }
 );
 
-$helper->trackRequestOnAnalytics($config);
+@$helper->trackRequestOnAnalytics($config);
 
 $requestPath = parse_url($helper->getRequestUri(), PHP_URL_PATH);
 

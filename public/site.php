@@ -35,36 +35,24 @@ if (!isset($helper)) {
         <div class="container">
             <div class="masthead">
                 <nav class="navbar navbar-light bg-faded rounded mb-3">
-                    <h1 class="text-muted">Free Online Tool Language Detector</h1>
+                    <h1 class="text-muted">Free Online Language Detector Tool</h1>
                 </nav>
             </div>
-
-            <div class="alert alert-danger" role="alert">
-                <h4 class="alert-heading">
-                    This documentation page is still under construction.
-                </h4>
-                <p class="mb-0">Since: 03-feb-2017. Help to finish it is needed.</p>
-            </div>
-
             <!-- Jumbotron -->
             <div class="jumbotron">
                 <h1>It will always be free!</h1>
-                <p class="lead">
-                    My name is Rafael and I'm from Brazil. I recently needed a reliable tool to detect the language of a text.
-                    Since I could not find any free tools, I decided to create my own and make it available to everyone free of charge.
-                </p>
             </div>
 
             <!-- Example row of columns -->
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <h2>How it works?</h2>
                     <p>
                         Just make a request to <code><?php
                             echo $helper->server('REQUEST_SCHEME') . '://' .
                             $helper->getHost() . $helper->getBasePath('/detect?t=') . urlencode('Bonjour le monde')
                         ?></code>
-                        and you will get a answer like above.
+                        and you will get a answer like bellow.
                     </p>
                     <pre><?php print_r(
                         [
@@ -76,12 +64,7 @@ if (!isset($helper)) {
                     ) ?></pre>
                     <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
                 </div>
-                <div class="col-lg-4">
-                    <h2>Multiple languages in same text</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-                    <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-                </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <h2>How does it detect languages?</h2>
                     <p>It uses CLD2 PHP Extention, from here <a href="https://github.com/fntlnz/cld2-php-ext">https://github.com/fntlnz/cld2-php-ext</a>.</p>
                     <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
